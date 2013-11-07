@@ -343,7 +343,7 @@ class Table(object):
             row_hash = base64.b64encode(row)
 
         if 1 == len(columns):
-            cf = columns.keys()[0]
+            cf = list(columns.keys())[0]
             url = "{table_name}/{row}/{cf}".format(table_name=self.name, row=row, cf=cf)
         else:
             url = "{table_name}/{row}".format(table_name=self.name, row=row_hash)
