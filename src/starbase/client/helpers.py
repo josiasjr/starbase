@@ -42,7 +42,7 @@ def build_json_data(row, columns, timestamp=None, encode_content=False, with_row
         if ':' in columns_keys[0]:
             # Single column case
             if 1 == len(columns):
-                key, value = columns.items()[0]
+                key, value = list(columns.items())[0]
 
                 if encode_content:
                     if PY3:
